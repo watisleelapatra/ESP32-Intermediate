@@ -1,6 +1,7 @@
+//Requires DHT sensors library by Adafruit
 #include "DHT.h"
 
-#define DHTPIN 5     // Digital pin connected to the DHT sensor
+#define DHTPIN 13     // GPIO13 connected to the DHT sensor
 #define DHTTYPE DHT11   // DHT 11
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -33,4 +34,9 @@ void loop() {
   Serial.print(F("°C "));
   Serial.print(f);
   Serial.println(F("°F"));
+  //---For Serial Ploter---//
+  //Serial.print(h);
+  //Serial.print(" ");
+  //Serial.println(t);
+  
   }
